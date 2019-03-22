@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() 
+{
+	for (;;)
+	{
+		int i,num1=0,num2=0,num3=0,num[3];
+		printf("Please enter three different integers(x,y,z):\n");
+		scanf("%d,%d,%d",&num[0],&num[1],&num[2]);
+		num1= num3= num[0];
+		if (num[0] == num[1] || num[0] == num[2] || num[1] == num[2])
+		printf ("Error, please try again.\n"); 
+		else
+		{
+			for (i=0; i<3; i++)
+			{
+				if(num[i]<num1)
+				num1= num[i];
+				if(num[i]>num3)
+				num3= num[i];
+			}
+			num2= num[0];
+			for (i=0; i<3; i++)
+			{
+				if((num[i] != num1) && (num[i] != num3))
+				num2= num[i];
+			}
+			printf("These three numbers are arranged from small to large is: %d, %d, %d\n",num1,num2,num3);
+			break;
+		}
+			
+	}
+	
+	system ("pause");
+	return 0;
+}
